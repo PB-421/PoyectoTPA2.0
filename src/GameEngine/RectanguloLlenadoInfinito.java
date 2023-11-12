@@ -19,6 +19,10 @@ public class RectanguloLlenadoInfinito extends JPanel {
     private double acceleracionD;
     private BufferedImage image;
 
+    /***
+     *
+     * @param maxWidth
+     */
     public RectanguloLlenadoInfinito(int maxWidth) {
         this.maxWidth = maxWidth;
         setFocusable(true);
@@ -52,6 +56,7 @@ public class RectanguloLlenadoInfinito extends JPanel {
         });
     }
 
+
     private void startAnimation() {
         if (timer == null || !timer.isRunning()) {
             timer = new Timer(10, new ActionListener() {
@@ -70,12 +75,19 @@ public class RectanguloLlenadoInfinito extends JPanel {
         }
     }
 
+    /***
+     *
+     */
     private void stopAnimation() {
         if (timer != null) {
             timer.stop();
         }
     }
 
+    /***
+     *
+     * @param g the <code>Graphics</code> object to protect
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -93,6 +105,10 @@ public class RectanguloLlenadoInfinito extends JPanel {
         g.drawRect(319, 74, maxWidth + 1, 101);
     }
 
+    /***
+     *
+     * @return
+     */
     public double getAcceleration() {
         acceleracionD=acceleration;
         return acceleracionD;
@@ -102,6 +118,10 @@ public class RectanguloLlenadoInfinito extends JPanel {
         return new Dimension(1100, 700);
     }
 
+    /***
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
