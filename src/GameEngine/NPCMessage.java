@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
     public class NPCMessage {
         private JFrame frame;
         private JTextArea chatArea;
@@ -62,14 +63,26 @@ import java.awt.event.ActionListener;
                 "Alex ve el xocas"
         };
 
+        /***
+         *
+         * @param name
+         */
         public NPCRacer(String name) {
             this.name = name;
         }
 
+        /***
+         *
+         * @return
+         */
         public String getName() {
             return name;
         }
 
+        /***
+         *
+         * @return
+         */
         public String generateNPCMessage() {
             int randomIndex = (int) (Math.random() * raceMessages.length);
             return raceMessages[randomIndex];
