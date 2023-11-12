@@ -2,6 +2,11 @@ package Jugador;
 
 import java.util.Random;
 public class random {
+    /***
+     *
+     * @param level
+     * @return
+     */
     public double Randomizer(int level) {
         double Empiezo = 0;
         double numeroRanLim = 0;
@@ -59,6 +64,10 @@ public class random {
         return rand_dub;
     }
 
+    /***
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         random R1 = new random();
         System.out.println("acceleration " + R1.Randomizer(5));
