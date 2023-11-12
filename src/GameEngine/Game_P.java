@@ -11,6 +11,10 @@ import java.awt.event.WindowEvent;
 import static com.sun.java.accessibility.util.AWTEventMonitor.addKeyListener;
 
 public class Game_P {
+    /***
+     *
+     * @param level
+     */
     public void Game_P(int level) {
         double aceleracionNPC;
         double tiempoNPC;
@@ -61,13 +65,28 @@ public class Game_P {
         rect1.requestFocus();
     }
 
+    /***
+     *
+     * @param acceleration
+     * @return
+     */
     public double CalculoFrame(double acceleration) {
         return ((100 * 500) / acceleration);
     }
 
+    /***
+     *
+     * @param Frame
+     * @return
+     */
     public double CalculoSeg(double Frame) {
         return ((Frame / 1000) * 10);
     }
+
+    /***
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         // Crear una instancia de Game_P y pasar un nivel (por ejemplo, nivel 5)
         Game_P game = new Game_P();
