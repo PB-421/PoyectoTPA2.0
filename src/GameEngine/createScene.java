@@ -1,5 +1,3 @@
-
-
 package GameEngine;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -13,7 +11,10 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class createScene {
-
+    /***
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable(){
             @Override
@@ -43,6 +44,11 @@ public class createScene {
 
         int contaux=1;
 
+        /***
+         *
+         * @param frames
+         * @param tiempoNPC
+         */
         public ImagePanel(double frames,double tiempoNPC) {
             images = new BufferedImage[10];
             frameint = (int) frames;
@@ -81,7 +87,10 @@ public class createScene {
                 System.err.println("Error loading image: " + ex.getMessage());
             }
             setBackground(Color.BLACK);
-
+/***
+ *
+ * @param frameint
+ */
             timer = new Timer(frameint, new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -92,6 +101,10 @@ public class createScene {
             timer.start();
         }
 
+        /***
+         *
+         * @param g the <code>Graphics</code> object to protect
+         */
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
@@ -141,6 +154,11 @@ public class createScene {
             return new Dimension(1100, 700);
         }
 
+        /***
+         *
+         * @param frame
+         * @return
+         */
         public double calcularTiempo(double frame){
             return ((frame/1000)*10);
         }
