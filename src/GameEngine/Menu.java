@@ -8,12 +8,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Menu {
+    /***
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         JFrame pantalla = new JFrame("Menu");;
         generarInicio(pantalla);
         System.out.println("Hello, world!");
         System.out.println("ALLL MY FELLAS");
     }
+
+    /***
+     *
+     * @param screen
+     */
     public static void generarInicio(JFrame screen) {
         JButton b1 = new JButton("Play");
         JButton b2 = new JButton("Settings");
@@ -38,6 +47,7 @@ public class Menu {
                 });
             }
         });
+
         b2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
