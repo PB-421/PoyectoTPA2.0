@@ -10,6 +10,10 @@ public class LevelSelect extends JDialog {
     private Integer selectedLevel;
     private int level;
 
+    /***
+     *
+     * @param parent
+     */
     public LevelSelect(JFrame parent) {
         super(parent, "Seleccionar Nivel", true); // Hacer que el JDialog sea modal
 
@@ -50,6 +54,10 @@ public class LevelSelect extends JDialog {
         return level;
     }
 
+    /***
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         JFrame parentFrame = new JFrame();
         parentFrame.setSize(400, 300); // Tamaño del JFrame principal (puedes ajustarlo)
