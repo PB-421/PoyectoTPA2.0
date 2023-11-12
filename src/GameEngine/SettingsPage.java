@@ -4,10 +4,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class SettingsPage extends JFrame {
     private JCheckBox checkBoxOption;
     private JTextField textFieldOption;
     private JButton saveButton;
+
 
     public SettingsPage() {
         super("Settings Page");
@@ -37,6 +39,10 @@ public class SettingsPage extends JFrame {
         setVisible(true);
     }
 
+    /***
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             new SettingsPage();
